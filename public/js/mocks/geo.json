@@ -1,0 +1,68 @@
+{
+  "departamentos": [
+    {"id": 1, "nombre": "La Paz", "codigo": "LP"},
+    {"id": 2, "nombre": "Santa Cruz", "codigo": "SC"},
+    {"id": 3, "nombre": "Cochabamba", "codigo": "CB"},
+    {"id": 4, "nombre": "Oruro", "codigo": "OR"},
+    {"id": 5, "nombre": "Potosí", "codigo": "PT"},
+    {"id": 6, "nombre": "Chuquisaca", "codigo": "CH"},
+    {"id": 7, "nombre": "Tarija", "codigo": "TJ"},
+    {"id": 8, "nombre": "Beni", "codigo": "BN"},
+    {"id": 9, "nombre": "Pando", "codigo": "PD"}
+  ],
+  "provincias": [
+    {"id": 1, "nombre": "Murillo", "departamento_id": 1},
+    {"id": 2, "nombre": "Aroma", "departamento_id": 1},
+    {"id": 3, "nombre": "Andrés Ibáñez", "departamento_id": 2},
+    {"id": 4, "nombre": "Warnes", "departamento_id": 2},
+    {"id": 5, "nombre": "Cercado", "departamento_id": 3},
+    {"id": 6, "nombre": "Quillacollo", "departamento_id": 3},
+    {"id": 7, "nombre": "Cercado", "departamento_id": 4},
+    {"id": 8, "nombre": "Eduardo Avaroa", "departamento_id": 4},
+    {"id": 9, "nombre": "Tomás Frías", "departamento_id": 5},
+    {"id": 10, "nombre": "Antonio Quijarro", "departamento_id": 5}
+  ],
+  "municipios": [
+    {"id": 1, "nombre": "La Paz", "provincia_id": 1},
+    {"id": 2, "nombre": "El Alto", "provincia_id": 1},
+    {"id": 3, "nombre": "Viacha", "provincia_id": 1},
+    {"id": 4, "nombre": "Santa Cruz de la Sierra", "provincia_id": 3},
+    {"id": 5, "nombre": "Warnes", "provincia_id": 4},
+    {"id": 6, "nombre": "Cochabamba", "provincia_id": 5},
+    {"id": 7, "nombre": "Quillacollo", "provincia_id": 6},
+    {"id": 8, "nombre": "Oruro", "provincia_id": 7},
+    {"id": 9, "nombre": "Potosí", "provincia_id": 9},
+    {"id": 10, "nombre": "Uyuni", "provincia_id": 10}
+  ],
+  "circunscripciones": [
+    {"id": 1, "nombre": "Circunscripción 1", "municipio_id": 1, "codigo": "CIR-001"},
+    {"id": 2, "nombre": "Circunscripción 2", "municipio_id": 1, "codigo": "CIR-002"},
+    {"id": 3, "nombre": "Circunscripción 3", "municipio_id": 2, "codigo": "CIR-003"},
+    {"id": 4, "nombre": "Circunscripción 4", "municipio_id": 4, "codigo": "CIR-004"},
+    {"id": 5, "nombre": "Circunscripción 5", "municipio_id": 6, "codigo": "CIR-005"}
+  ],
+  "recintos": [
+    {"id": 1, "nombre": "Colegio San Calixto", "circunscripcion_id": 1, "codigo": "REC-001"},
+    {"id": 2, "nombre": "Escuela República de Chile", "circunscripcion_id": 1, "codigo": "REC-002"},
+    {"id": 3, "nombre": "Colegio San Ignacio", "circunscripcion_id": 2, "codigo": "REC-003"},
+    {"id": 4, "nombre": "Unidad Educativa El Alto", "circunscripcion_id": 3, "codigo": "REC-004"},
+    {"id": 5, "nombre": "Colegio Santa Cruz", "circunscripcion_id": 4, "codigo": "REC-005"},
+    {"id": 6, "nombre": "Escuela Cochabamba", "circunscripcion_id": 5, "codigo": "REC-006"}
+  ],
+  "asientos": [
+    {"id": 1, "nombre": "Asiento 1", "recinto_id": 1, "codigo": "ASI-001"},
+    {"id": 2, "nombre": "Asiento 2", "recinto_id": 1, "codigo": "ASI-002"},
+    {"id": 3, "nombre": "Asiento 1", "recinto_id": 2, "codigo": "ASI-003"},
+    {"id": 4, "nombre": "Asiento 2", "recinto_id": 2, "codigo": "ASI-004"},
+    {"id": 5, "nombre": "Asiento 1", "recinto_id": 3, "codigo": "ASI-005"},
+    {"id": 6, "nombre": "Asiento 2", "recinto_id": 3, "codigo": "ASI-006"}
+  ],
+  "mesas": [
+    {"id": 1, "nombre": "Mesa 1", "asiento_id": 1, "codigo": "MES-001"},
+    {"id": 2, "nombre": "Mesa 2", "asiento_id": 1, "codigo": "MES-002"},
+    {"id": 3, "nombre": "Mesa 3", "asiento_id": 2, "codigo": "MES-003"},
+    {"id": 4, "nombre": "Mesa 4", "asiento_id": 2, "codigo": "MES-004"},
+    {"id": 5, "nombre": "Mesa 5", "asiento_id": 3, "codigo": "MES-005"},
+    {"id": 6, "nombre": "Mesa 6", "asiento_id": 3, "codigo": "MES-006"}
+  ]
+}

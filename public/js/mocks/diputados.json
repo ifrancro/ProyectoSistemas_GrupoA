@@ -1,0 +1,76 @@
+{
+  "candidates": [
+    {
+      "id": 1,
+      "name": "María González",
+      "party": "MAS-IPSP",
+      "color_hex": "#FF6B6B",
+      "circunscripcion_id": 1,
+      "uninominal": true
+    },
+    {
+      "id": 2,
+      "name": "Carlos Mendoza",
+      "party": "CC",
+      "color_hex": "#4ECDC4",
+      "circunscripcion_id": 1,
+      "uninominal": false
+    },
+    {
+      "id": 3,
+      "name": "Ana Rodríguez",
+      "party": "FPV",
+      "color_hex": "#45B7D1",
+      "circunscripcion_id": 1,
+      "uninominal": true
+    },
+    {
+      "id": 4,
+      "name": "Luis Fernández",
+      "party": "MAS-IPSP",
+      "color_hex": "#96CEB4",
+      "circunscripcion_id": 2,
+      "uninominal": false
+    },
+    {
+      "id": 5,
+      "name": "Patricia López",
+      "party": "CC",
+      "color_hex": "#FFEAA7",
+      "circunscripcion_id": 2,
+      "uninominal": true
+    }
+  ],
+  "votos": [
+    {
+      "candidate_id": 1,
+      "mesa_id": 1,
+      "votos": 45,
+      "uninominal_votos": 12
+    },
+    {
+      "candidate_id": 2,
+      "mesa_id": 1,
+      "votos": 38,
+      "uninominal_votos": 0
+    },
+    {
+      "candidate_id": 3,
+      "mesa_id": 1,
+      "votos": 42,
+      "uninominal_votos": 15
+    },
+    {
+      "candidate_id": 4,
+      "mesa_id": 2,
+      "votos": 52,
+      "uninominal_votos": 0
+    },
+    {
+      "candidate_id": 5,
+      "mesa_id": 2,
+      "votos": 48,
+      "uninominal_votos": 18
+    }
+  ]
+}
