@@ -47,7 +47,9 @@
                         @endif
                     @endauth
                         <a
-                            href="http://127.0.0.1:8000"
+                            href="http://127.0.0.1:8002"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             class="inline-block px-5 py-1.5 dark:text-[#EDEDEC] border-[#19140035] hover:border-[#1915014a] border text-[#1b1b18] dark:border-[#3E3E3A] dark:hover:border-[#62605b] rounded-sm text-sm leading-normal"
                         >
                             Ir a LaravelElecciones

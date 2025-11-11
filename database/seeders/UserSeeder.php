@@ -3,22 +3,26 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 use App\Models\User;
 
 class UserSeeder extends Seeder
 {
     public function run(): void
     {
-        // Admin
+        // Admin - Usuario del Proyecto Votaciones
         User::updateOrCreate(
             ['username' => 'admin'],
             [
-                'name'   => 'Administrador',
-                'password' => 'admin123',   // se hashea con el mutator setPasswordAttribute
-                'mesa_id' => null,          // el admin no pertenece a mesa
+                'name'   => 'Administrador Sistema Votaciones',
+                'email'  => 'admin@votaciones.bo',
+                'password' => Hash::make('admin123'),
+                'mesa_id' => null,
                 'circunscripcion_id' => null,
-                'rol'    => 'admin',
+                'role'   => 'admin',        // Para Proyecto Votaciones
+                'rol_electoral' => 'ADMIN',  // Para Proyecto Electoral
                 'cargo'  => 'Administrador General',
+                'is_active' => true,
                 'activo' => true,
             ]
         );
@@ -44,20 +48,26 @@ class UserSeeder extends Seeder
         ];
 
         foreach ($users as $i => $u) {
-            // si ya tienes tabla mesas, coloca aquí el ID real; de lo contrario deja null
-            $mesaId = null; // ej: MesaSufragio::where('numero', $i+1)->value('id') ?? null;
             $mesaNumber = $i + 1; // Asignar número de mesa del 1 al 16
+            
+            // Buscar la mesa por número (tabla unificada 'mesas')
+            $mesaId = \DB::table('mesas')
+                ->where('numero_mesa', $mesaNumber)
+                ->value('id');
 
             User::updateOrCreate(
                 ['username' => $u['username']],
                 [
                     'name'   => $u['name'],
-                    'password' => '123456', // mutator lo hashea
+                    'email'  => strtolower($u['username']) . '@votaciones.bo',
+                    'password' => Hash::make('123456'),
                     'mesa_id' => $mesaId,
                     'mesa_number' => $mesaNumber,
                     'circunscripcion_id' => null,
-                    'rol'    => 'mesa',     // o 'user' si así lo manejas
-                    'cargo'  => 'Miembro de Mesa',
+                    'role'   => 'user',          // Para Proyecto Votaciones
+                    'rol_electoral' => 'VOLUNTARIO', // Para Proyecto Electoral
+                    'cargo'  => 'Digitador de Mesa',
+                    'is_active' => true,
                     'activo' => true,
                 ]
             );
